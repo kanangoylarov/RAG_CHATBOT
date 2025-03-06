@@ -36,20 +36,21 @@ Start with Uvicorn
 To run the FastAPI application, use the following command:
 ```bash
 uvicorn main:app --reload
-This will start the FastAPI app and run it locally.
-
+This will start the FastAPI app and run it locally
+```
 ##Test the API
 Once the application is running, you can test it via Swagger UI:
 ```bash
 Swagger UI: http://127.0.0.1:8000/docs
 Redoc UI: http://127.0.0.1:8000/redoc
+```
 ##🌍 Access the Web Page
 You can access the HTML page at http://127.0.0.1:8000/static/index.html. The page will take user queries and query the Pinecone database for cocktail suggestions.
 
 ##📑 API Endpoints
 1. /query
 The API endpoint that processes a cocktail query and returns the most relevant results.
-
+```bash
 Method: POST
 Request Body:
 json
@@ -71,6 +72,7 @@ Edit
     }
   ]
 }
+```
 ##🔄 Database
 Pinecone
 Pinecone is used to store cocktail data as vectors. You can add new data to Pinecone and query it as needed.
