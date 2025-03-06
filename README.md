@@ -23,7 +23,7 @@ This project is a Cocktail Chatbot application integrated with Pinecone and buil
    ```bash
    git clone https://github.com/your_username/cocktail-chatbot.git
    cd cocktail-chatbot
-🔧 Configuration
+##🔧 Configuration
 Set up Pinecone API Key
 To use Pinecone, you will need an API key. Sign up for Pinecone, get your API key, and add it to the .env file:
 
@@ -34,18 +34,19 @@ If you haven't created a Pinecone index yet, the application will automatically 
 🏃‍♂️ Running the Application
 Start with Uvicorn
 To run the FastAPI application, use the following command:
+```bash
 uvicorn main:app --reload
 This will start the FastAPI app and run it locally.
 
-Test the API
+##Test the API
 Once the application is running, you can test it via Swagger UI:
-
+```bash
 Swagger UI: http://127.0.0.1:8000/docs
 Redoc UI: http://127.0.0.1:8000/redoc
-🌍 Access the Web Page
+##🌍 Access the Web Page
 You can access the HTML page at http://127.0.0.1:8000/static/index.html. The page will take user queries and query the Pinecone database for cocktail suggestions.
 
-📑 API Endpoints
+##📑 API Endpoints
 1. /query
 The API endpoint that processes a cocktail query and returns the most relevant results.
 
@@ -70,17 +71,17 @@ Edit
     }
   ]
 }
-🔄 Database
+##🔄 Database
 Pinecone
 Pinecone is used to store cocktail data as vectors. You can add new data to Pinecone and query it as needed.
 
-📝 Contributing
+##📝 Contributing
 Fork the repo.
 Create a new branch (git checkout -b feature/feature_name).
 Make your changes and commit them (git commit -am 'Add new feature').
 Push your branch (git push origin feature/feature_name).
 Create a pull request.
-📄 License
+##📄 License
 This project is licensed under the MIT License.
 
 Feel free to open an issue if you have any questions or contribute to the project!
