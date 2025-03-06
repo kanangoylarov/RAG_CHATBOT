@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #chatbox { width: 50%; margin: auto; text-align: left; border: 1px solid #ddd; padding: 10px; }
+        .user { color: blue; }
+        .bot { color: green; }
+    </style>
+</head>
+<body>
+    <h1>🍹 Coctail Chatbot 🍸</h1>
+    <div id="chatbox"></div>
+    
+    <form id="chatForm">
+        <input type="text" id="query" name="query" placeholder="Ask question..." required>
+        <button type="submit">Gönder</button>
+    </form>
+
+    <script>
+        document.getElementById("chatForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); 
+
+            let query = document.getElementById("query").value;
+            let chatbox = document.getElementById("chatbox");
+
+            chatbox.innerHTML += `<p class="user"><b>You:</b> ${query}</p>`;
+
+            let formData = new FormData();
+            formData.append("query", query);
+
+            let response = await fetch("/api/chat", {
+                method: "POST",
+                body: formData
+            });
+
+            let data = await response.json();
+
+            if (data.results.length > 0) {
+                chatbox.innerHTML += `<p class="bot"><b>Bot:</b> ${data.results[0].text}</p>`;
+            } else {
+                chatbox.innerHTML += `<p class="bot"><b>Bot:</b> Sorry, I din't find answer.</p>`;
+            }
+
+            document.getElementById("query").value = "";  
+        });
+    </script>
+</body>
+</html>
