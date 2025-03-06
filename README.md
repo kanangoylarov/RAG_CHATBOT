@@ -1,27 +1,28 @@
-Cocktail Chatbot - FastAPI Project
+# Cocktail Chatbot - FastAPI Project
+
 This project is a Cocktail Chatbot application integrated with Pinecone and built with FastAPI. Users can ask questions about cocktails and get suggestions based on their queries.
 
-🚀 Getting Started
-Prerequisites
-Python 3.7+
-FastAPI
-Uvicorn
-Pinecone
-Sentence-Transformers
-Pandas
-HTML (for static files)
-📦 Installation
-Clone the Repository
-Clone the repository to your local machine using the following command:
+## 🚀 Getting Started
 
-git clone https://github.com/your_username/cocktail-chatbot.git
-cd cocktail-chatbot
-Install Dependencies
-Create a virtual environment and install the required Python packages:
+### Prerequisites
 
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+- Python 3.7+
+- FastAPI
+- Uvicorn
+- Pinecone
+- Sentence-Transformers
+- Pandas
+- HTML (for static files)
+
+---
+
+## 📦 Installation
+
+1. **Clone the Repository**  
+   Clone the repository to your local machine using the following command:
+   ```bash
+   git clone https://github.com/your_username/cocktail-chatbot.git
+   cd cocktail-chatbot
 🔧 Configuration
 Set up Pinecone API Key
 To use Pinecone, you will need an API key. Sign up for Pinecone, get your API key, and add it to the .env file:
